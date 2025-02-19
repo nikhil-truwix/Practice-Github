@@ -6,3 +6,4 @@ const	            ✅ Yes	  ❌ No (TDZ)	  ❌ No (ReferenceError)
 Function Decl.    	✅ Yes	   ✅ Yes	         ✅ Yes
 Function Expr. (var) ✅ Yes	   undefined	      ❌ No (TypeError)
 Function Expr. (let/const)✅ Yes	 ❌ No (TDZ)	 ❌ No (ReferenceError)
+2025
