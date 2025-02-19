@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Background Generator</title>
+        <style>
+            body{
+                        width:100%;
+                        height:100vh;
+                        background-image:linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+            }
+        </style>
+    </head>
+    <body >
+      <section>
+        <div>
+            <button id="myButton">#051937</button>
+            <button id="myButton2">#008793</button>
+        </div>
+        <h2>Cpoy Your Code Here</h2>
+        <div class="copyCode">
+
+        </div>
+      </section>
+      <script>
+        let btn1=document.getElementById("myButton");
+        let btn2=document.getElementById("myButton2");
+        let myHexaValues="0123456789abcdef"
+       
+        const hexValues=()=>{
+          let myHexValues="123456789abcdef";
+          let Colors="#";
+          for(let i=0;i<6;i++){
+              colors=Colors+myHexValues[Math.floor(Math.random()*myHexValues.length)];
+              console.log(colors);
+              
+          }
+           return colors;
+        };
+        const handleButton1 =() => {
+          let rgb1=hexValues();
+          console.log(rgb1);
+          document.body.style.backgroundImage=`linear-gradient(to right top, ${rgb1}, #444)`;
+        }
+        const handleButton2 =() => {
+          let rgb2=hexValues();
+          console.log(rgb2);
+        }
+        btn1.addEventListener("click",handleButton1);
+        btn2.addEventListener("click",handleButton2);
+      </script>
+    </body>
+</html>
