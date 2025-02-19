@@ -1,0 +1,8 @@
+
+Declaration Type	Hoisted?	Initialized?	Usable Before Declaration?
+var	                 ✅ Yes	    undefined	    ✅ Yes (but undefined)
+let                 ✅ Yes	  ❌ No (TDZ)	  ❌ No (ReferenceError)
+const	            ✅ Yes	  ❌ No (TDZ)	  ❌ No (ReferenceError)
+Function Decl.    	✅ Yes	   ✅ Yes	         ✅ Yes
+Function Expr. (var) ✅ Yes	   undefined	      ❌ No (TypeError)
+Function Expr. (let/const)✅ Yes	 ❌ No (TDZ)	 ❌ No (ReferenceError)
